@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "c62202a8-2b3e-47c2-be45-8040262ad0fb",
+		"name": "Subscription Billing Simulator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41701558"
+	},
+	"item": [
+		{
+			"name": "Create subscription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "TESTSERVER"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "refcode",
+						"value": "415"
+					},
+					{
+						"key": "secret",
+						"value": "xjbp7PjRMUgBfvJnZsAsVIc8iNDEZKkx"
+					},
+					{
+						"key": "ou-code",
+						"value": "1"
+					},
+					{
+						"key": "Cookie",
+						"value": "CAKEPHP=jo1r4fkv6ql4qgsn6tob9tlocl",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"donorId\": \"abc123\",\r\n  \"amount\": 1500,\r\n  \"currency\": \"USD\",\r\n  \"interval\": \"monthly\",\r\n  \"campaignDescription\": \"Emergency food and clean water for earthquake victims in Nepal\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscriptions"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost/integrations/ginesysv3' \\\r\n--header 'client_id: TESTSERVER' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'refcode: 384' \\\r\n--header 'secret: xjbp7PjRMUgBfvJnZsAsVIc8iNDEZKkx' \\\r\n--header 'ou-code: 1' \\\r\n--header 'Cookie: CAKEPHP=jo1r4fkv6ql4qgsn6tob9tlocl' \\\r\n--data '{\r\n\"org_id\": \"21302\",\r\n\"ou_code\": 1,\r\n\"event_name\": \"app.allocation.channel.added\",\r\n\"version\": \"2023-10\",\r\n\"erp_version\": \"012025003\",\r\n\"event_timestamp\": \"2025-02-24T18:50:35\",\r\n\"refcode\": \"384\",\r\n\"event_reference_name\": \"384~Shopify\",\r\n\"request_id\": \"0e1b5e21-57c4-4cb6-93f3-be152b7d347f\",\r\n\"resource\":\r\n\"{\\\"subledger_code\\\":384,\\\"subledger_name\\\":\\\"Shopify\\\",\\\"subledger_alias\\\":\\\"Shopify\\\",\\\"bi\r\nlling_address\\\":null,\\\"billing_district\\\":null,\\\"billing_city\\\":null,\\\"billing_pincode\\\":nul\r\nl,\\\"billing_phone1\\\":null,\\\"billing_phone2\\\":null,\\\"billing_phone3\\\":null,\\\"billing_residenc\r\neno\\\":null,\\\"billing_faxno\\\":null,\\\"billing_contact_mobileno\\\":\\\"9100823567\\\",\\\"billing_emai\r\nl\\\":null,\\\"billing_website\\\":null,\\\"billing_contact_person\\\":\\\"samiksha\\\",\\\"fin_vat_reg_numb\r\ner\\\":null,\\\"fin_cst_reg_number\\\":null,\\\"class_code\\\":7,\\\"arap_gl_code\\\":1033,\\\"transporter_c\r\node\\\":null,\\\"sales_agent_code\\\":null,\\\"sales_agent_commsn_rate\\\":null,\\\"sales_int_delay_paym\r\nent\\\":null,\\\"sales_credit_days_allowed\\\":0,\\\"fin_pan_number\\\":\\\"AYXPP7415R\\\",\\\"remarks\\\":nul\r\nl,\\\"extinct\\\":\\\"N\\\",\\\"pur_rsp_markup_factor\\\":0.0,\\\"pur_rsp_markup_roffin\\\":0.0,\\\"pur_rsp_ma\r\nrkup_ro_basis\\\":\\\"U\\\",\\\"fin_tds_source_code\\\":null,\\\"fin_cheque_label\\\":null,\\\"pur_allow_con\r\nsignment\\\":\\\"N\\\",\\\"sal_price_list_code\\\":null,\\\"pur_rate_price_type\\\":\\\"M\\\",\\\"sal_sales_term\r\n_code\\\":0,\\\"sal_credit_rating_code\\\":0,\\\"sal_credit_limit_amt\\\":0.0,\\\"in_lgt_appl\\\":\\\"N\\\",\\\"\r\npur_wsp_markup_factor\\\":0.0,\\\"pur_wsp_markup_roffin\\\":0.0,\\\"pur_wsp_markup_ro_basis\\\":\\\"U\\\",\r\n\\\"shipping_address\\\":null,\\\"shipping_district\\\":null,\\\"shipping_city\\\":null,\\\"shipping_pin\\\"\r\n:null,\\\"shipping_phone1\\\":null,\\\"shipping_phone2\\\":null,\\\"shipping_phone3\\\":null,\\\"shipping_\r\nresidenceno\\\":null,\\\"shipping_faxno\\\":null,\\\"shipping_contact_mobileno\\\":null,\\\"shipping_ema\r\nil\\\":null,\\\"shipping_website\\\":null,\\\"shipping_contact_person\\\":null,\\\"pur_due_date_basis\\\":\r\n\\\"E\\\",\\\"pur_cd_applicable\\\":\\\"N\\\",\\\"pur_cd_percentage\\\":null,\\\"pur_cd_period_days\\\":null,\\\"d\r\nirector_owner_name\\\":null,\\\"brand_name\\\":null,\\\"product_type\\\":null,\\\"company_type\\\":\\\"OTH\\\"\r\n,\\\"industry_type\\\":\\\"OTH\\\",\\\"fin_cst_reg_date\\\":null,\\\"fin_excise_reg_number\\\":null,\\\"fin_ex\r\ncise_reg_date\\\":null,\\\"fin_servicetax_reg_number\\\":null,\\\"fin_servicetax_reg_date\\\":null,\\\"f\r\nin_servicetax_category\\\":null,\\\"fin_ssi_number\\\":null,\\\"fin_micro_small_estd_no\\\":null,\\\"fin\r\n_bank_name\\\":null,\\\"fin_bank_account_number\\\":null,\\\"fin_micr_code\\\":null,\\\"fin_ifsc_code\\\":\r\nnull,\\\"fin_rtgs_code\\\":null,\\\"billing_alternate_email\\\":null,\\\"shipping_alternate_email\\\":nu\r\nll,\\\"subledger_id\\\":\\\"SHP\\\",\\\"in_permit_appl\\\":\\\"N\\\",\\\"pur_purchase_gl_code\\\":null,\\\"pur_pur\r\nchase_sl_code\\\":null,\\\"pur_return_gl_code\\\":null,\\\"pur_return_sl_code\\\":null,\\\"pur_rate_mark\r\ndown_factor\\\":null,\\\"pur_rate_roffin\\\":null,\\\"pur_rate_roff_limit\\\":\\\"U\\\",\\\"mode_of_operatio\r\nn\\\":\\\"O\\\",\\\"sal_trfin_gl_code\\\":null,\\\"sal_sales_gl_code\\\":null,\\\"sal_sales_sl_code\\\":null,\\\r\n\"sal_return_gl_code\\\":null,\\\"sal_return_sl_code\\\":null,\\\"sal_consale_gl_code\\\":1034,\\\"sal_co\r\nnsale_sl_code\\\":null,\\\"sal_trfout_gl_code\\\":null,\\\"sal_trfout_sl_code\\\":0,\\\"out_lgt_appl\\\":\\\r\n\"N\\\",\\\"out_permit_appl\\\":\\\"N\\\",\\\"gatein_app\\\":\\\"N\\\",\\\"pur_trade_group_code\\\":null,\\\"pur_term\r\n_code\\\":null,\\\"pur_currency_code\\\":null,\\\"sale_post_method\\\":null,\\\"sal_vatexp_gl_code\\\":nul\r\nl,\\\"sal_vatexp_sl_code\\\":null,\\\"sal_trfin_sl_code\\\":null,\\\"sal_transit_gl_code\\\":null,\\\"sal_\r\n\r\ntransit_sl_code\\\":null,\\\"sal_transitdiff_gl_code\\\":null,\\\"sal_transitdiff_sl_code\\\":null,\\\"f\r\nin_tds_appl\\\":\\\"N\\\",\\\"prd_jobber_stockpoint_app\\\":\\\"N\\\",\\\"prd_max_overdue_days\\\":null,\\\"prd_\r\nmax_overdue_action\\\":\\\"N\\\",\\\"pur_tax_region_code\\\":null,\\\"pur_form_code\\\":null,\\\"sal_trade_g\r\nroup_code\\\":null,\\\"sal_sales_form_code\\\":null,\\\"pur_pricechart_appl\\\":\\\"N\\\",\\\"pur_ord_buffer\r\n_days\\\":0,\\\"in_lgt_shiptrack_appl\\\":\\\"N\\\",\\\"in_lgt_baletrack_appl\\\":\\\"N\\\",\\\"pur_ord_delivery\r\n_duedays\\\":1,\\\"fin_cin_number\\\":null,\\\"sal_creditverify_rule\\\":\\\"N\\\",\\\"sal_credit_limit_tol\\\r\n\":null,\\\"sal_overdue_days\\\":null,\\\"sal_overdue_amount\\\":null,\\\"fin_gst_category_code\\\":1,\\\"f\r\nin_gst_reg_number\\\":null,\\\"fin_gst_reg_date\\\":null,\\\"fin_gst_state_code\\\":null,\\\"pur_ord_lim\r\nit\\\":null,\\\"marketplace_channelcode\\\":null,\\\"isMarketPlace\\\":false,\\\"mop\\\":[{\\\"mopId\\\":1,\\\"m\r\nopShortCode\\\":\\\"PU\\\",\\\"mopType\\\":\\\"VCH\\\",\\\"mopName\\\":\\\"Payu\\\"},{\\\"mopId\\\":2,\\\"mopShortCode\\\"\r\n:\\\"RZ\\\",\\\"mopType\\\":\\\"VCH\\\",\\\"mopName\\\":\\\"Razorpay\\\"}]}\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "delete subscription",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "TESTSERVER"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "refcode",
+						"value": "415"
+					},
+					{
+						"key": "secret",
+						"value": "xjbp7PjRMUgBfvJnZsAsVIc8iNDEZKkx"
+					},
+					{
+						"key": "ou-code",
+						"value": "1"
+					},
+					{
+						"key": "Cookie",
+						"value": "CAKEPHP=jo1r4fkv6ql4qgsn6tob9tlocl",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"donorId\": \"abc123\",\r\n  \"amount\": 1500,\r\n  \"currency\": \"USD\",\r\n  \"interval\": \"monthly\",\r\n  \"campaignDescription\": \"Emergency food and clean water for earthquake victims in Nepal\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/subscriptions/shital",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscriptions",
+						"shital"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost/integrations/ginesysv3' \\\r\n--header 'client_id: TESTSERVER' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'refcode: 384' \\\r\n--header 'secret: xjbp7PjRMUgBfvJnZsAsVIc8iNDEZKkx' \\\r\n--header 'ou-code: 1' \\\r\n--header 'Cookie: CAKEPHP=jo1r4fkv6ql4qgsn6tob9tlocl' \\\r\n--data '{\r\n\"org_id\": \"21302\",\r\n\"ou_code\": 1,\r\n\"event_name\": \"app.allocation.channel.added\",\r\n\"version\": \"2023-10\",\r\n\"erp_version\": \"012025003\",\r\n\"event_timestamp\": \"2025-02-24T18:50:35\",\r\n\"refcode\": \"384\",\r\n\"event_reference_name\": \"384~Shopify\",\r\n\"request_id\": \"0e1b5e21-57c4-4cb6-93f3-be152b7d347f\",\r\n\"resource\":\r\n\"{\\\"subledger_code\\\":384,\\\"subledger_name\\\":\\\"Shopify\\\",\\\"subledger_alias\\\":\\\"Shopify\\\",\\\"bi\r\nlling_address\\\":null,\\\"billing_district\\\":null,\\\"billing_city\\\":null,\\\"billing_pincode\\\":nul\r\nl,\\\"billing_phone1\\\":null,\\\"billing_phone2\\\":null,\\\"billing_phone3\\\":null,\\\"billing_residenc\r\neno\\\":null,\\\"billing_faxno\\\":null,\\\"billing_contact_mobileno\\\":\\\"9100823567\\\",\\\"billing_emai\r\nl\\\":null,\\\"billing_website\\\":null,\\\"billing_contact_person\\\":\\\"samiksha\\\",\\\"fin_vat_reg_numb\r\ner\\\":null,\\\"fin_cst_reg_number\\\":null,\\\"class_code\\\":7,\\\"arap_gl_code\\\":1033,\\\"transporter_c\r\node\\\":null,\\\"sales_agent_code\\\":null,\\\"sales_agent_commsn_rate\\\":null,\\\"sales_int_delay_paym\r\nent\\\":null,\\\"sales_credit_days_allowed\\\":0,\\\"fin_pan_number\\\":\\\"AYXPP7415R\\\",\\\"remarks\\\":nul\r\nl,\\\"extinct\\\":\\\"N\\\",\\\"pur_rsp_markup_factor\\\":0.0,\\\"pur_rsp_markup_roffin\\\":0.0,\\\"pur_rsp_ma\r\nrkup_ro_basis\\\":\\\"U\\\",\\\"fin_tds_source_code\\\":null,\\\"fin_cheque_label\\\":null,\\\"pur_allow_con\r\nsignment\\\":\\\"N\\\",\\\"sal_price_list_code\\\":null,\\\"pur_rate_price_type\\\":\\\"M\\\",\\\"sal_sales_term\r\n_code\\\":0,\\\"sal_credit_rating_code\\\":0,\\\"sal_credit_limit_amt\\\":0.0,\\\"in_lgt_appl\\\":\\\"N\\\",\\\"\r\npur_wsp_markup_factor\\\":0.0,\\\"pur_wsp_markup_roffin\\\":0.0,\\\"pur_wsp_markup_ro_basis\\\":\\\"U\\\",\r\n\\\"shipping_address\\\":null,\\\"shipping_district\\\":null,\\\"shipping_city\\\":null,\\\"shipping_pin\\\"\r\n:null,\\\"shipping_phone1\\\":null,\\\"shipping_phone2\\\":null,\\\"shipping_phone3\\\":null,\\\"shipping_\r\nresidenceno\\\":null,\\\"shipping_faxno\\\":null,\\\"shipping_contact_mobileno\\\":null,\\\"shipping_ema\r\nil\\\":null,\\\"shipping_website\\\":null,\\\"shipping_contact_person\\\":null,\\\"pur_due_date_basis\\\":\r\n\\\"E\\\",\\\"pur_cd_applicable\\\":\\\"N\\\",\\\"pur_cd_percentage\\\":null,\\\"pur_cd_period_days\\\":null,\\\"d\r\nirector_owner_name\\\":null,\\\"brand_name\\\":null,\\\"product_type\\\":null,\\\"company_type\\\":\\\"OTH\\\"\r\n,\\\"industry_type\\\":\\\"OTH\\\",\\\"fin_cst_reg_date\\\":null,\\\"fin_excise_reg_number\\\":null,\\\"fin_ex\r\ncise_reg_date\\\":null,\\\"fin_servicetax_reg_number\\\":null,\\\"fin_servicetax_reg_date\\\":null,\\\"f\r\nin_servicetax_category\\\":null,\\\"fin_ssi_number\\\":null,\\\"fin_micro_small_estd_no\\\":null,\\\"fin\r\n_bank_name\\\":null,\\\"fin_bank_account_number\\\":null,\\\"fin_micr_code\\\":null,\\\"fin_ifsc_code\\\":\r\nnull,\\\"fin_rtgs_code\\\":null,\\\"billing_alternate_email\\\":null,\\\"shipping_alternate_email\\\":nu\r\nll,\\\"subledger_id\\\":\\\"SHP\\\",\\\"in_permit_appl\\\":\\\"N\\\",\\\"pur_purchase_gl_code\\\":null,\\\"pur_pur\r\nchase_sl_code\\\":null,\\\"pur_return_gl_code\\\":null,\\\"pur_return_sl_code\\\":null,\\\"pur_rate_mark\r\ndown_factor\\\":null,\\\"pur_rate_roffin\\\":null,\\\"pur_rate_roff_limit\\\":\\\"U\\\",\\\"mode_of_operatio\r\nn\\\":\\\"O\\\",\\\"sal_trfin_gl_code\\\":null,\\\"sal_sales_gl_code\\\":null,\\\"sal_sales_sl_code\\\":null,\\\r\n\"sal_return_gl_code\\\":null,\\\"sal_return_sl_code\\\":null,\\\"sal_consale_gl_code\\\":1034,\\\"sal_co\r\nnsale_sl_code\\\":null,\\\"sal_trfout_gl_code\\\":null,\\\"sal_trfout_sl_code\\\":0,\\\"out_lgt_appl\\\":\\\r\n\"N\\\",\\\"out_permit_appl\\\":\\\"N\\\",\\\"gatein_app\\\":\\\"N\\\",\\\"pur_trade_group_code\\\":null,\\\"pur_term\r\n_code\\\":null,\\\"pur_currency_code\\\":null,\\\"sale_post_method\\\":null,\\\"sal_vatexp_gl_code\\\":nul\r\nl,\\\"sal_vatexp_sl_code\\\":null,\\\"sal_trfin_sl_code\\\":null,\\\"sal_transit_gl_code\\\":null,\\\"sal_\r\n\r\ntransit_sl_code\\\":null,\\\"sal_transitdiff_gl_code\\\":null,\\\"sal_transitdiff_sl_code\\\":null,\\\"f\r\nin_tds_appl\\\":\\\"N\\\",\\\"prd_jobber_stockpoint_app\\\":\\\"N\\\",\\\"prd_max_overdue_days\\\":null,\\\"prd_\r\nmax_overdue_action\\\":\\\"N\\\",\\\"pur_tax_region_code\\\":null,\\\"pur_form_code\\\":null,\\\"sal_trade_g\r\nroup_code\\\":null,\\\"sal_sales_form_code\\\":null,\\\"pur_pricechart_appl\\\":\\\"N\\\",\\\"pur_ord_buffer\r\n_days\\\":0,\\\"in_lgt_shiptrack_appl\\\":\\\"N\\\",\\\"in_lgt_baletrack_appl\\\":\\\"N\\\",\\\"pur_ord_delivery\r\n_duedays\\\":1,\\\"fin_cin_number\\\":null,\\\"sal_creditverify_rule\\\":\\\"N\\\",\\\"sal_credit_limit_tol\\\r\n\":null,\\\"sal_overdue_days\\\":null,\\\"sal_overdue_amount\\\":null,\\\"fin_gst_category_code\\\":1,\\\"f\r\nin_gst_reg_number\\\":null,\\\"fin_gst_reg_date\\\":null,\\\"fin_gst_state_code\\\":null,\\\"pur_ord_lim\r\nit\\\":null,\\\"marketplace_channelcode\\\":null,\\\"isMarketPlace\\\":false,\\\"mop\\\":[{\\\"mopId\\\":1,\\\"m\r\nopShortCode\\\":\\\"PU\\\",\\\"mopType\\\":\\\"VCH\\\",\\\"mopName\\\":\\\"Payu\\\"},{\\\"mopId\\\":2,\\\"mopShortCode\\\"\r\n:\\\"RZ\\\",\\\"mopType\\\":\\\"VCH\\\",\\\"mopName\\\":\\\"Razorpay\\\"}]}\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Get subscriptions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "TESTSERVER"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "refcode",
+						"value": "415"
+					},
+					{
+						"key": "secret",
+						"value": "xjbp7PjRMUgBfvJnZsAsVIc8iNDEZKkx"
+					},
+					{
+						"key": "ou-code",
+						"value": "1"
+					},
+					{
+						"key": "Cookie",
+						"value": "CAKEPHP=jo1r4fkv6ql4qgsn6tob9tlocl",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscriptions"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost/integrations/ginesysv3' \\\r\n--header 'client_id: TESTSERVER' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'refcode: 384' \\\r\n--header 'secret: xjbp7PjRMUgBfvJnZsAsVIc8iNDEZKkx' \\\r\n--header 'ou-code: 1' \\\r\n--header 'Cookie: CAKEPHP=jo1r4fkv6ql4qgsn6tob9tlocl' \\\r\n--data '{\r\n\"org_id\": \"21302\",\r\n\"ou_code\": 1,\r\n\"event_name\": \"app.allocation.channel.added\",\r\n\"version\": \"2023-10\",\r\n\"erp_version\": \"012025003\",\r\n\"event_timestamp\": \"2025-02-24T18:50:35\",\r\n\"refcode\": \"384\",\r\n\"event_reference_name\": \"384~Shopify\",\r\n\"request_id\": \"0e1b5e21-57c4-4cb6-93f3-be152b7d347f\",\r\n\"resource\":\r\n\"{\\\"subledger_code\\\":384,\\\"subledger_name\\\":\\\"Shopify\\\",\\\"subledger_alias\\\":\\\"Shopify\\\",\\\"bi\r\nlling_address\\\":null,\\\"billing_district\\\":null,\\\"billing_city\\\":null,\\\"billing_pincode\\\":nul\r\nl,\\\"billing_phone1\\\":null,\\\"billing_phone2\\\":null,\\\"billing_phone3\\\":null,\\\"billing_residenc\r\neno\\\":null,\\\"billing_faxno\\\":null,\\\"billing_contact_mobileno\\\":\\\"9100823567\\\",\\\"billing_emai\r\nl\\\":null,\\\"billing_website\\\":null,\\\"billing_contact_person\\\":\\\"samiksha\\\",\\\"fin_vat_reg_numb\r\ner\\\":null,\\\"fin_cst_reg_number\\\":null,\\\"class_code\\\":7,\\\"arap_gl_code\\\":1033,\\\"transporter_c\r\node\\\":null,\\\"sales_agent_code\\\":null,\\\"sales_agent_commsn_rate\\\":null,\\\"sales_int_delay_paym\r\nent\\\":null,\\\"sales_credit_days_allowed\\\":0,\\\"fin_pan_number\\\":\\\"AYXPP7415R\\\",\\\"remarks\\\":nul\r\nl,\\\"extinct\\\":\\\"N\\\",\\\"pur_rsp_markup_factor\\\":0.0,\\\"pur_rsp_markup_roffin\\\":0.0,\\\"pur_rsp_ma\r\nrkup_ro_basis\\\":\\\"U\\\",\\\"fin_tds_source_code\\\":null,\\\"fin_cheque_label\\\":null,\\\"pur_allow_con\r\nsignment\\\":\\\"N\\\",\\\"sal_price_list_code\\\":null,\\\"pur_rate_price_type\\\":\\\"M\\\",\\\"sal_sales_term\r\n_code\\\":0,\\\"sal_credit_rating_code\\\":0,\\\"sal_credit_limit_amt\\\":0.0,\\\"in_lgt_appl\\\":\\\"N\\\",\\\"\r\npur_wsp_markup_factor\\\":0.0,\\\"pur_wsp_markup_roffin\\\":0.0,\\\"pur_wsp_markup_ro_basis\\\":\\\"U\\\",\r\n\\\"shipping_address\\\":null,\\\"shipping_district\\\":null,\\\"shipping_city\\\":null,\\\"shipping_pin\\\"\r\n:null,\\\"shipping_phone1\\\":null,\\\"shipping_phone2\\\":null,\\\"shipping_phone3\\\":null,\\\"shipping_\r\nresidenceno\\\":null,\\\"shipping_faxno\\\":null,\\\"shipping_contact_mobileno\\\":null,\\\"shipping_ema\r\nil\\\":null,\\\"shipping_website\\\":null,\\\"shipping_contact_person\\\":null,\\\"pur_due_date_basis\\\":\r\n\\\"E\\\",\\\"pur_cd_applicable\\\":\\\"N\\\",\\\"pur_cd_percentage\\\":null,\\\"pur_cd_period_days\\\":null,\\\"d\r\nirector_owner_name\\\":null,\\\"brand_name\\\":null,\\\"product_type\\\":null,\\\"company_type\\\":\\\"OTH\\\"\r\n,\\\"industry_type\\\":\\\"OTH\\\",\\\"fin_cst_reg_date\\\":null,\\\"fin_excise_reg_number\\\":null,\\\"fin_ex\r\ncise_reg_date\\\":null,\\\"fin_servicetax_reg_number\\\":null,\\\"fin_servicetax_reg_date\\\":null,\\\"f\r\nin_servicetax_category\\\":null,\\\"fin_ssi_number\\\":null,\\\"fin_micro_small_estd_no\\\":null,\\\"fin\r\n_bank_name\\\":null,\\\"fin_bank_account_number\\\":null,\\\"fin_micr_code\\\":null,\\\"fin_ifsc_code\\\":\r\nnull,\\\"fin_rtgs_code\\\":null,\\\"billing_alternate_email\\\":null,\\\"shipping_alternate_email\\\":nu\r\nll,\\\"subledger_id\\\":\\\"SHP\\\",\\\"in_permit_appl\\\":\\\"N\\\",\\\"pur_purchase_gl_code\\\":null,\\\"pur_pur\r\nchase_sl_code\\\":null,\\\"pur_return_gl_code\\\":null,\\\"pur_return_sl_code\\\":null,\\\"pur_rate_mark\r\ndown_factor\\\":null,\\\"pur_rate_roffin\\\":null,\\\"pur_rate_roff_limit\\\":\\\"U\\\",\\\"mode_of_operatio\r\nn\\\":\\\"O\\\",\\\"sal_trfin_gl_code\\\":null,\\\"sal_sales_gl_code\\\":null,\\\"sal_sales_sl_code\\\":null,\\\r\n\"sal_return_gl_code\\\":null,\\\"sal_return_sl_code\\\":null,\\\"sal_consale_gl_code\\\":1034,\\\"sal_co\r\nnsale_sl_code\\\":null,\\\"sal_trfout_gl_code\\\":null,\\\"sal_trfout_sl_code\\\":0,\\\"out_lgt_appl\\\":\\\r\n\"N\\\",\\\"out_permit_appl\\\":\\\"N\\\",\\\"gatein_app\\\":\\\"N\\\",\\\"pur_trade_group_code\\\":null,\\\"pur_term\r\n_code\\\":null,\\\"pur_currency_code\\\":null,\\\"sale_post_method\\\":null,\\\"sal_vatexp_gl_code\\\":nul\r\nl,\\\"sal_vatexp_sl_code\\\":null,\\\"sal_trfin_sl_code\\\":null,\\\"sal_transit_gl_code\\\":null,\\\"sal_\r\n\r\ntransit_sl_code\\\":null,\\\"sal_transitdiff_gl_code\\\":null,\\\"sal_transitdiff_sl_code\\\":null,\\\"f\r\nin_tds_appl\\\":\\\"N\\\",\\\"prd_jobber_stockpoint_app\\\":\\\"N\\\",\\\"prd_max_overdue_days\\\":null,\\\"prd_\r\nmax_overdue_action\\\":\\\"N\\\",\\\"pur_tax_region_code\\\":null,\\\"pur_form_code\\\":null,\\\"sal_trade_g\r\nroup_code\\\":null,\\\"sal_sales_form_code\\\":null,\\\"pur_pricechart_appl\\\":\\\"N\\\",\\\"pur_ord_buffer\r\n_days\\\":0,\\\"in_lgt_shiptrack_appl\\\":\\\"N\\\",\\\"in_lgt_baletrack_appl\\\":\\\"N\\\",\\\"pur_ord_delivery\r\n_duedays\\\":1,\\\"fin_cin_number\\\":null,\\\"sal_creditverify_rule\\\":\\\"N\\\",\\\"sal_credit_limit_tol\\\r\n\":null,\\\"sal_overdue_days\\\":null,\\\"sal_overdue_amount\\\":null,\\\"fin_gst_category_code\\\":1,\\\"f\r\nin_gst_reg_number\\\":null,\\\"fin_gst_reg_date\\\":null,\\\"fin_gst_state_code\\\":null,\\\"pur_ord_lim\r\nit\\\":null,\\\"marketplace_channelcode\\\":null,\\\"isMarketPlace\\\":false,\\\"mop\\\":[{\\\"mopId\\\":1,\\\"m\r\nopShortCode\\\":\\\"PU\\\",\\\"mopType\\\":\\\"VCH\\\",\\\"mopName\\\":\\\"Payu\\\"},{\\\"mopId\\\":2,\\\"mopShortCode\\\"\r\n:\\\"RZ\\\",\\\"mopType\\\":\\\"VCH\\\",\\\"mopName\\\":\\\"Razorpay\\\"}]}\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "List Transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "TESTSERVER"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "refcode",
+						"value": "415"
+					},
+					{
+						"key": "secret",
+						"value": "xjbp7PjRMUgBfvJnZsAsVIc8iNDEZKkx"
+					},
+					{
+						"key": "ou-code",
+						"value": "1"
+					},
+					{
+						"key": "Cookie",
+						"value": "CAKEPHP=jo1r4fkv6ql4qgsn6tob9tlocl",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/subscriptions/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscriptions",
+						"transactions"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost/integrations/ginesysv3' \\\r\n--header 'client_id: TESTSERVER' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'refcode: 384' \\\r\n--header 'secret: xjbp7PjRMUgBfvJnZsAsVIc8iNDEZKkx' \\\r\n--header 'ou-code: 1' \\\r\n--header 'Cookie: CAKEPHP=jo1r4fkv6ql4qgsn6tob9tlocl' \\\r\n--data '{\r\n\"org_id\": \"21302\",\r\n\"ou_code\": 1,\r\n\"event_name\": \"app.allocation.channel.added\",\r\n\"version\": \"2023-10\",\r\n\"erp_version\": \"012025003\",\r\n\"event_timestamp\": \"2025-02-24T18:50:35\",\r\n\"refcode\": \"384\",\r\n\"event_reference_name\": \"384~Shopify\",\r\n\"request_id\": \"0e1b5e21-57c4-4cb6-93f3-be152b7d347f\",\r\n\"resource\":\r\n\"{\\\"subledger_code\\\":384,\\\"subledger_name\\\":\\\"Shopify\\\",\\\"subledger_alias\\\":\\\"Shopify\\\",\\\"bi\r\nlling_address\\\":null,\\\"billing_district\\\":null,\\\"billing_city\\\":null,\\\"billing_pincode\\\":nul\r\nl,\\\"billing_phone1\\\":null,\\\"billing_phone2\\\":null,\\\"billing_phone3\\\":null,\\\"billing_residenc\r\neno\\\":null,\\\"billing_faxno\\\":null,\\\"billing_contact_mobileno\\\":\\\"9100823567\\\",\\\"billing_emai\r\nl\\\":null,\\\"billing_website\\\":null,\\\"billing_contact_person\\\":\\\"samiksha\\\",\\\"fin_vat_reg_numb\r\ner\\\":null,\\\"fin_cst_reg_number\\\":null,\\\"class_code\\\":7,\\\"arap_gl_code\\\":1033,\\\"transporter_c\r\node\\\":null,\\\"sales_agent_code\\\":null,\\\"sales_agent_commsn_rate\\\":null,\\\"sales_int_delay_paym\r\nent\\\":null,\\\"sales_credit_days_allowed\\\":0,\\\"fin_pan_number\\\":\\\"AYXPP7415R\\\",\\\"remarks\\\":nul\r\nl,\\\"extinct\\\":\\\"N\\\",\\\"pur_rsp_markup_factor\\\":0.0,\\\"pur_rsp_markup_roffin\\\":0.0,\\\"pur_rsp_ma\r\nrkup_ro_basis\\\":\\\"U\\\",\\\"fin_tds_source_code\\\":null,\\\"fin_cheque_label\\\":null,\\\"pur_allow_con\r\nsignment\\\":\\\"N\\\",\\\"sal_price_list_code\\\":null,\\\"pur_rate_price_type\\\":\\\"M\\\",\\\"sal_sales_term\r\n_code\\\":0,\\\"sal_credit_rating_code\\\":0,\\\"sal_credit_limit_amt\\\":0.0,\\\"in_lgt_appl\\\":\\\"N\\\",\\\"\r\npur_wsp_markup_factor\\\":0.0,\\\"pur_wsp_markup_roffin\\\":0.0,\\\"pur_wsp_markup_ro_basis\\\":\\\"U\\\",\r\n\\\"shipping_address\\\":null,\\\"shipping_district\\\":null,\\\"shipping_city\\\":null,\\\"shipping_pin\\\"\r\n:null,\\\"shipping_phone1\\\":null,\\\"shipping_phone2\\\":null,\\\"shipping_phone3\\\":null,\\\"shipping_\r\nresidenceno\\\":null,\\\"shipping_faxno\\\":null,\\\"shipping_contact_mobileno\\\":null,\\\"shipping_ema\r\nil\\\":null,\\\"shipping_website\\\":null,\\\"shipping_contact_person\\\":null,\\\"pur_due_date_basis\\\":\r\n\\\"E\\\",\\\"pur_cd_applicable\\\":\\\"N\\\",\\\"pur_cd_percentage\\\":null,\\\"pur_cd_period_days\\\":null,\\\"d\r\nirector_owner_name\\\":null,\\\"brand_name\\\":null,\\\"product_type\\\":null,\\\"company_type\\\":\\\"OTH\\\"\r\n,\\\"industry_type\\\":\\\"OTH\\\",\\\"fin_cst_reg_date\\\":null,\\\"fin_excise_reg_number\\\":null,\\\"fin_ex\r\ncise_reg_date\\\":null,\\\"fin_servicetax_reg_number\\\":null,\\\"fin_servicetax_reg_date\\\":null,\\\"f\r\nin_servicetax_category\\\":null,\\\"fin_ssi_number\\\":null,\\\"fin_micro_small_estd_no\\\":null,\\\"fin\r\n_bank_name\\\":null,\\\"fin_bank_account_number\\\":null,\\\"fin_micr_code\\\":null,\\\"fin_ifsc_code\\\":\r\nnull,\\\"fin_rtgs_code\\\":null,\\\"billing_alternate_email\\\":null,\\\"shipping_alternate_email\\\":nu\r\nll,\\\"subledger_id\\\":\\\"SHP\\\",\\\"in_permit_appl\\\":\\\"N\\\",\\\"pur_purchase_gl_code\\\":null,\\\"pur_pur\r\nchase_sl_code\\\":null,\\\"pur_return_gl_code\\\":null,\\\"pur_return_sl_code\\\":null,\\\"pur_rate_mark\r\ndown_factor\\\":null,\\\"pur_rate_roffin\\\":null,\\\"pur_rate_roff_limit\\\":\\\"U\\\",\\\"mode_of_operatio\r\nn\\\":\\\"O\\\",\\\"sal_trfin_gl_code\\\":null,\\\"sal_sales_gl_code\\\":null,\\\"sal_sales_sl_code\\\":null,\\\r\n\"sal_return_gl_code\\\":null,\\\"sal_return_sl_code\\\":null,\\\"sal_consale_gl_code\\\":1034,\\\"sal_co\r\nnsale_sl_code\\\":null,\\\"sal_trfout_gl_code\\\":null,\\\"sal_trfout_sl_code\\\":0,\\\"out_lgt_appl\\\":\\\r\n\"N\\\",\\\"out_permit_appl\\\":\\\"N\\\",\\\"gatein_app\\\":\\\"N\\\",\\\"pur_trade_group_code\\\":null,\\\"pur_term\r\n_code\\\":null,\\\"pur_currency_code\\\":null,\\\"sale_post_method\\\":null,\\\"sal_vatexp_gl_code\\\":nul\r\nl,\\\"sal_vatexp_sl_code\\\":null,\\\"sal_trfin_sl_code\\\":null,\\\"sal_transit_gl_code\\\":null,\\\"sal_\r\n\r\ntransit_sl_code\\\":null,\\\"sal_transitdiff_gl_code\\\":null,\\\"sal_transitdiff_sl_code\\\":null,\\\"f\r\nin_tds_appl\\\":\\\"N\\\",\\\"prd_jobber_stockpoint_app\\\":\\\"N\\\",\\\"prd_max_overdue_days\\\":null,\\\"prd_\r\nmax_overdue_action\\\":\\\"N\\\",\\\"pur_tax_region_code\\\":null,\\\"pur_form_code\\\":null,\\\"sal_trade_g\r\nroup_code\\\":null,\\\"sal_sales_form_code\\\":null,\\\"pur_pricechart_appl\\\":\\\"N\\\",\\\"pur_ord_buffer\r\n_days\\\":0,\\\"in_lgt_shiptrack_appl\\\":\\\"N\\\",\\\"in_lgt_baletrack_appl\\\":\\\"N\\\",\\\"pur_ord_delivery\r\n_duedays\\\":1,\\\"fin_cin_number\\\":null,\\\"sal_creditverify_rule\\\":\\\"N\\\",\\\"sal_credit_limit_tol\\\r\n\":null,\\\"sal_overdue_days\\\":null,\\\"sal_overdue_amount\\\":null,\\\"fin_gst_category_code\\\":1,\\\"f\r\nin_gst_reg_number\\\":null,\\\"fin_gst_reg_date\\\":null,\\\"fin_gst_state_code\\\":null,\\\"pur_ord_lim\r\nit\\\":null,\\\"marketplace_channelcode\\\":null,\\\"isMarketPlace\\\":false,\\\"mop\\\":[{\\\"mopId\\\":1,\\\"m\r\nopShortCode\\\":\\\"PU\\\",\\\"mopType\\\":\\\"VCH\\\",\\\"mopName\\\":\\\"Payu\\\"},{\\\"mopId\\\":2,\\\"mopShortCode\\\"\r\n:\\\"RZ\\\",\\\"mopType\\\":\\\"VCH\\\",\\\"mopName\\\":\\\"Razorpay\\\"}]}\"\r\n}'"
+			},
+			"response": []
+		}
+	]
+}
