@@ -36,7 +36,9 @@ docker build -t subscription-billing-simulator .
 2. Run the container again:
 docker run -p 3000:3000 subscription-billing-simulator
 
-============================
-for dynamic changes reflection
+#for dynamic changes reflection
 docker run -p 3000:3000 -v $(pwd)/src:/app/src subscription-billing-simulator
-============================
+
+
+
+
